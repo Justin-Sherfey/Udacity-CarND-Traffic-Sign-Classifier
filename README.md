@@ -5,7 +5,7 @@
 
 ## Project: Build a Traffic Sign Recognition Classifier
 
-
+### Note- I am training and running code on CUDA powered by NVDIA GEFORCE 940MX instead of AWS. The model takes only 20% of the entire Graphic Card Load.
 ## Step 0: Load The Data
 
 
