@@ -845,3 +845,33 @@ with tf.Session() as sess:
 | 17,No entry                 | 17,No entry(100%)                 | 14,Stop(0%)                      | 36,Go straight or right(0%)                  |
 | 27,Pedestrians              | 27,Pedestrians(99%)              | 18,General caution(.0023% ~ 0%)           | 11,Right-of-way  at the next intersection (0.000031% ~ 0%) |
 | 31,Wild animals crossing (100%)   | 31,Wild animals crossing (0%)   | 18,General caution (0%)          | 21,Double curve   (0%)                       |
+
+
+
+```python
+
+
+top_k = tf.nn.top_k(softmax_logits, k=5)
+
+
+with tf.Session() as sess:
+    sess.run(tf.global_variables_initializer())
+    my_top_k = sess.run(top_k)
+    print(my_top_k)
+```
+
+    TopKV2(values=array([[1.0000000e+00, 4.3875111e-14, 1.4714824e-19, 1.8063934e-21,
+            3.7279575e-23],
+           [1.0000000e+00, 1.8989359e-09, 1.0316757e-09, 5.0861965e-10,
+            2.1904693e-13],
+           [1.0000000e+00, 1.8613472e-21, 6.9792521e-26, 1.6644072e-28,
+            1.7513094e-30],
+           [9.9999976e-01, 2.4823470e-07, 3.1078990e-08, 5.1456439e-12,
+            7.5784116e-13],
+           [9.9962652e-01, 2.5788019e-04, 1.1019847e-04, 5.4015331e-06,
+            1.3614331e-09]], dtype=float32), indices=array([[35,  3, 34, 29, 28],
+           [29, 18, 28, 26, 23],
+           [17, 14, 36,  9, 29],
+           [27, 18, 11, 26, 24],
+           [31, 18, 21, 29, 11]]))
+    
