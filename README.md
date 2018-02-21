@@ -838,4 +838,10 @@ with tf.Session() as sess:
            [31, 18, 21]]))
     
 
-
+| Input Image Label and Class | First Guess Label and Class | Second Guess Label and Class | Third Guess Label and Class              |
+|-----------------------------|-----------------------------|------------------------------|------------------------------------------|
+| 35,Ahead only               | 35,Ahead only(100%)               | 3,Speed limit,(60km/h)(0%)       | 34,Turn left ahead(0%)                       |
+| 29,Bicycles crossing        | 29,Bicycles crossing(100%)        | 18,General caution(0%)           | 28,Children crossing(0%)                     |
+| 17,No entry                 | 17,No entry(100%)                 | 14,Stop(0%)                      | 36,Go straight or right(0%)                  |
+| 27,Pedestrians              | 27,Pedestrians(99%)              | 18,General caution(.0023% ~ 0%)           | 11,Right-of-way  at the next intersection (0.000031% ~ 0%) |
+| 31,Wild animals crossing (100%)   | 31,Wild animals crossing (0%)   | 18,General caution (0%)          | 21,Double curve   (0%)                       |
